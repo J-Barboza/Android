@@ -13,7 +13,7 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
 
     private TextInputEditText textGas;
-    private TextInputEditText textAlcohol;
+    private TextInputEditText textEthanol;
     private TextView textResult;
 
     @Override
@@ -22,34 +22,32 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         textGas     = findViewById(R.id.textGas);
-        textAlcohol = findViewById(R.id.textAlcohol);
+        textEthanol = findViewById(R.id.textEthanol);
         textResult  = findViewById(R.id.textViewResult);
     }
 
     public void calculateWhatsBetter(View view){
 
         String txtValueGas = Objects.requireNonNull(textGas.getText()).toString();
-        String txtValueAlcohol = Objects.requireNonNull(textAlcohol.getText()).toString();
+        String txtValueAlcohol = Objects.requireNonNull(textEthanol.getText()).toString();
 
         if (validFields(txtValueGas, txtValueAlcohol)) {
             double valueGas = Double.parseDouble(txtValueGas);
-            double valueAlcohol = Double.parseDouble(txtValueAlcohol);
-            if ((valueGas * 0.7) <= valueAlcohol) {
+            double valueEthanol = Double.parseDouble(txtValueAlcohol);
+            if ((valueGas * 0.7) <= valueEthanol) {
                 textResult.setText(R.string.textResultGas);
             } else {
-                textResult.setText(R.string.textResultAlcohol);
+                textResult.setText(R.string.textResultEthanol);
             }
         } else {
             textResult.setText(R.string.textInformation);
         }
     }
 
-    public Boolean validFields(String pAlcohol, String pGas){
-
+    public Boolean validFields(String pAlcohol, String pGas) {
         boolean fieldsValid = true;
-        if (pAlcohol == null || pAlcohol.equals("")){
-            fieldsValid = false;
-        } else if (pGas == null || pGas.equals("")){
+        if (pAlcohol == null || pAlcohol.equals("") ||
+                pGas == null || pGas.equals("")) {
             fieldsValid = false;
         }
         return fieldsValid;

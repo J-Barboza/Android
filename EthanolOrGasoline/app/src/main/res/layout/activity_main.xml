@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ethanolorgasoline" />
+        app:srcCompat="@drawable/ethanol_or_gasoline" />
 
     <TextView
         android:id="@+id/textViewInform"
@@ -42,10 +43,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewInform">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textAlcohol"
+            android:id="@+id/textEthanol"
             android:layout_width="match_parent"
             android:layout_height="54dp"
-            android:hint="@string/hintPriceAlcohol"
+            android:hint="@string/hintPriceEthanol"
             android:inputType="number|numberDecimal"
             android:textColorHint="#616161"
             android:textSize="14sp" />

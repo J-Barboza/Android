@@ -3,10 +3,10 @@
     <string name="textTitle">Melhor opção de abastecimento do seu carro</string>
     <string name="descriptionLogo">Logotipo Álcool ou Gasolina</string>
     <string name="hintPriceGas">Preço da gasolina. ex.6.89</string>
-    <string name="hintPriceAlcohol">Preço do álcool. ex.4.39</string>
+    <string name="hintPriceEthanol">Preço do álcool. ex.4.39</string>
     <string name="textBaseResult">Melhor utilizar?</string>
     <string name="textResultGas">Melhor utilizar Gasolina</string>
-    <string name="textResultAlcohol">Melhor utilizar Álcool</string>
+    <string name="textResultEthanol">Melhor utilizar Álcool</string>
     <string name="btnCalculate">Calcular</string>
     <string name="textInformation">Deve informar todos os valores!</string>
     <string name="msgInvalidText">Valores inválidos!</string>
